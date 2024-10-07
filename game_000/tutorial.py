@@ -1,9 +1,9 @@
-import game as main
+from game_data import full_board
 import time as t
 
 def tutorial():
     print("This is the game board")
-    print(main.full_board)
+    print(full_board)
     t.sleep(1)
     print("In every game, the board will contain a few pieces: _, <, and X.")
     t.sleep(1)
