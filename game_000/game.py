@@ -26,5 +26,3 @@ while tut_q != 'y':
         break
     elif tut_q == 'n':
         break
-
-print(full_board)
