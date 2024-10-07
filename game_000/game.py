@@ -17,3 +17,5 @@ while True:
         break
     else:
         print('Invalid input. Please enter y or n.')
+
+print('finished')
