@@ -14,9 +14,11 @@ def tutorial():
     print("'X' will send you back to the beginning of the board.")
     t.sleep(1)
     print("On each player's board there will be 1 of each special board piece set randomly per game.")
-    print('''
-_ _ _ _ X _ _ _ _ _ < _ _ _ _
-_ _ _ _ _ _ < _ _ _ _ _ _ X _
+    t.sleep(1)
+    print(''' Example:
+_ _ _ _ X _ _ _ _ _ < _ _ _ _ W
+_ _ _ _ _ _ _ < _ _ _ _ _ X _ W
           ''')
-    
-tutorial()
+    print("You will roll dice to figure out how many moves you make.")
+    t.sleep(1)
+    print("Now go my children, have fun playing my game.")
