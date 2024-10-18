@@ -22,3 +22,7 @@ while True:
 ellipsis_py.ellipsis()
 
 game_data_py.rand_board()
+time.sleep(1)
+full_board = ' '.join(game_data_py.board_p1) + "\n" + ' '.join(game_data_py.board_p2)
+print(full_board)
+time.sleep(1000)
