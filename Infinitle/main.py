@@ -14,7 +14,6 @@ def main():
         targetWord = wordResponse.json()[0]
     else:
         print(f"ERROR! Word status code: {wordResponse.status_code}")
-    targetWord = "glyph"
     for i in targetWord:
         targetList.append(i)
     hintUrl = f"https://api.datamuse.com/words?rel_jja={targetWord}"
@@ -29,6 +28,7 @@ def main():
         for h in range(5):
             index = random.randint(0, len(hintResponse.json()))
             hintList.append(hintResponse.json()[index]["word"])
+        print(hintList)
 
     print("The word is 5 letters, you have 6 guesses. Go!")
 
@@ -37,7 +37,9 @@ def main():
         guessList = []
         for g in guess:
             guessList.append(g)
-        if len(guess) > 5:
+        if guess == "!hints":
+            getHints()
+        elif len(guess) > 5:
             print("Invalid input!")
         elif len(guess) < 5:
             print("Invalid input!")
