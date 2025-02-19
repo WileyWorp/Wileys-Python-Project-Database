@@ -46,15 +46,11 @@ def main():
         elif guess != targetWord:
             for l in guessList:
                 if l == targetList[guessList.index(l)]:
-                    print(l)
                     correct.append(l)
                 else:
                     for t in targetList:
                         if l == t:
-                            print(t)
                             misplaced.append(l)
-                        else:
-                            break
             currentGuess += 1
             if currentGuess > 6:
                 print(f"You ran out of guesses, the word was {targetWord}")
