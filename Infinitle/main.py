@@ -36,6 +36,7 @@ def main():
         guess = input(f"Guess {currentGuess}: ")
         guessList = []
         for g in guess:
+            '''This goes through all of the words in the guess and puts them into a list for ease of access'''
             guessList.append(g)
         if guess == "!hints":
             getHints()
@@ -45,10 +46,12 @@ def main():
             print("Invalid input!")
         elif guess != targetWord:
             for l in guessList:
+                '''The first look through the lists, just to weed out the correct letters'''
                 if l == targetList[guessList.index(l)]:
                     correct.append(l)
                 else:
                     for t in targetList:
+                        '''Once the correct letters are weeded out we have to find the misplaced ones'''
                         if l == t:
                             misplaced.append(l)
             currentGuess += 1
@@ -56,12 +59,14 @@ def main():
                 print(f"You ran out of guesses, the word was {targetWord}")
                 break
             print(f"Incorrect! {correct} are correct and {misplaced} are misplaced.")
+            # Clearing the variable lists so that it doesn't accidentally duplicate correct and misplaced letters
             correct.clear()
             misplaced.clear()
         elif guess == targetWord:
             print("Correct!")
             break
         else:
+            '''This shouldn't occur, but it's here for testing'''
             print("Error occured")
 
 
